@@ -1,0 +1,1 @@
+Simple program to calculate the multiplication table of a number m (mod m) 
