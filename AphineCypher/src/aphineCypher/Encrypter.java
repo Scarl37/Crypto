@@ -23,6 +23,7 @@ public class Encrypter {
 	/**
 	 *  Constructor for encrypter
 	 *  Takes args and intializes The printwriter and scanner for reading writing to the files
+	 *  Creates file with the same filename as the file to be encrypted but adds "APH" right before the "."
 	 *  
 	 * @param args
 	 * {@code String[]} first arg is FileName second arg is String representation of number to use for Alpha value
@@ -52,6 +53,12 @@ public class Encrypter {
 		
 	}
 	
+	/**
+	 * Where the magic happens. Switch plaintext to a char array and iterate over each character 
+	 * changing each character into an integer where a/A == 0 and z/Z == 25 then 
+	 * using the alpha and beta values to produce our ciphertext and swapping back to a char value.
+	 * Finally it writes the ciphertext to a file. 
+	 */
 	public void encrpyt(){
 		String plaintext = "";
 		while(in.hasNext()){
